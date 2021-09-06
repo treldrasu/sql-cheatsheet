@@ -1,0 +1,426 @@
+<head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            margin-top: 50px;
+        }
+        h3{
+            color: white;
+            background-color: orange;
+            padding: 10px;
+            margin-top: 0;
+        }
+        section{
+            border: 1px solid orange;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        section div {
+            padding: 0 20px;
+            padding-bottom: 15px;
+        }
+        code{
+            color: black;
+        }
+        .hljs-keyword, .hljs-attribute{
+            color: orange;
+        }
+        .cheat_sheet_output_column_2 .altrow,
+        .cheat_sheet_output_column_3 .altrow {
+            background: rgba(255, 166, 0, 0.165);
+        }
+        .cheat_sheet_output_block table {
+            page-break-inside: avoid;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        .cheat_sheet_note {
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 3px solid orange;
+        }
+    </style>
+</head>
+<body>
+<h2>SQL Grundlagen Cheatsheet</h2>
+<article>
+    <table border="0" cellspacing="0" width="100%" cellpadding="0" class="cheat_sheet_output">
+        <tbody>
+            <tr>
+                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_1">
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12416">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12416">Tabellen erstellen</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12416">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs sql"><strong><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span></strong> table_name
+(
+    id data_type(size) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
+    column_name2 data_type(size),
+    column_name3 data_type(size),
+    ....
+    <span class="hljs-keyword">PRIMARY</span> KEY (id)
+);</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12417">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12417">Daten einfügen</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12417">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs apache"><strong><span class="hljs-attribute">INSERT INTO</span></strong> table_name (column<span class="hljs-number">1</span>,column<span class="hljs-number">2</span>,column<span class="hljs-number">3</span>,...)
+    <span class="hljs-attribute">VALUES</span> (value<span class="hljs-number">1</span>,value<span class="hljs-number">2</span>,value<span class="hljs-number">3</span>,...);
+
+<strong><span class="hljs-attribute">UPDATE</span></strong> table_name
+    <span class="hljs-attribute">SET</span> column<span class="hljs-number">1</span>=value<span class="hljs-number">1</span>,column<span class="hljs-number">2</span>=value<span class="hljs-number">2</span>,...
+    <span class="hljs-attribute">WHERE</span> some_column=some_value;
+    
+<strong><span class="hljs-attribute">DELETE</span> FROM</strong> table_name
+    <span class="hljs-attribute">WHERE</span> some_column=some_value;</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12418">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12418">Struktur einer Abfrage</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12418">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs css"><strong class="hljs-keyword">SELECT</strong> <span>[Überschriften/Spaltennamen, Anweisungen]</span>
+    <strong><span class="hljs-keyword">FROM</span></strong> <span class="hljs-selector-attr">[Tabellennamen]</span>
+    <strong class="hljs-keyword">WHERE</strong> <span class="hljs-selector-attr">[Bedingungen, Gruppierung, Sortierung]</span></code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12427">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12427">Beispiel Abfrage</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12427">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> einwohner/<span class="hljs-number">1000</span> <span class="hljs-keyword">AS</span> <span class="hljs-string">"Einwohner"</span>
+    <span class="hljs-keyword">FROM</span> cia
+    <span class="hljs-keyword">WHERE</span> region=<span class="hljs-string">"Asien"</span></code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;">Einwoh­nerzahl der asiati­schen Länder in der Tabelle cia
+                                    in Tausenden angeben</div>
+                            </div>
+                        </div>
+                    </section>
+                </td>
+                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_2">
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12419">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12419">logische Operatoren</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12419">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_twocol">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">NOT</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">logische Negation (nicht)</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">OR</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">logisches ODER</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">AND</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">logisches UND</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">IS NULL</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">kein Wert einget­ragen</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;">Vor und nach einem logischen Operator muss eine
+                                    vollst­ändige Bedingung stehen.</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12420">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12420">Vergle­ich­sop­era­toren</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12420">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_twocol">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">=</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">gleich</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">&lt;&gt;</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">nicht gleich</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">&gt;</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">grösser als</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">&lt;</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">kleiner als</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">&gt;=</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">grösser oder gleich</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">&lt;=</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">kleiner oder gleich</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12421">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12421">Textbe­din­gungen</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12421">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_twocol">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">%</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">beliebige Anzahl Zeichen</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">_</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">genau ein Zeichen</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;">Diese Beding­ungen können nur mit <strong>LIKE</strong>
+                                    benutzt werden.</div>
+                            </div>
+                        </div>
+                    </section>
+                </td>
+                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_3">
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12422">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12422">Ausgabe auftei­len­/be­sch­ränken
+                        </h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12422">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs-"><span class="hljs-">SELECT</span> []
+    <span class="hljs-">FROM</span> <span class="hljs-selector-attr">[]</span>
+    <span class="hljs-">WHERE</span> []
+    <strong class="hljs-keyword">LIMIT</strong> Startzeile, Anzahl</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;"><code>Limit 2,3</code> => zeigt die 3 Elemente nach der Zeile 2</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12424">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12424">Gruppe­nfu­nkt­ionen</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12424">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_twocol">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">COUNT(­expr)</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">Zeilen zählen</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">AVG(expr)</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">Durchs­chnitt</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">MIN(expr)</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">kleinster Wert</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">MAX(expr)</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">grösster Wert</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">SUM(expr)</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">Summe von Werten</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;">Für <em>expr</em> gibt man die Spalte­nüb­ers­chrift an
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12428">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12428">Beispiel Abfrage II</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12428">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>)
+    <span class="hljs-keyword">FROM</span> mitarbeiter
+    <span class="hljs-keyword">WHERE</span> abt <span class="hljs-operator">=</span> "Verkauf"</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="cheat_sheet_note">
+                                <div style="padding: 3px 8px;">Anzahl der Mitarb­eiter in der Abteilung "­Ver­kau­f"
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12425">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12425">Gruppieren</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12425">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> []
+    <span class="hljs-keyword">FROM</span> []
+    <span class="hljs-keyword">WHERE</span>[]
+    <strong><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span></strong> spalten_name</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12426">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12426">Sortieren</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12426">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs css">SELECT <span class="hljs-selector-attr">[]</span>
+    <span class="hljs-selector-tag">FROM</span> <span class="hljs-selector-attr">[]</span>
+    WHERE <span class="hljs-selector-attr">[]</span>
+    <strong><span class="hljs-attribute">ORDER BY</span></strong> spalten_name</code></pre>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+</body>
