@@ -70,7 +70,8 @@
     column_name2 data_type(size),
     column_name3 data_type(size),
     ....
-    <span class="hljs-keyword">PRIMARY</span> KEY (id)
+    <span class="hljs-keyword">PRIMARY</span> KEY (id),
+    <span class="hljs-keyword">FOREIGN</span> KEY (id) <span class="hljs-keyword">REFERENCES</span> zweite_Tabelle(fk_id), 
 );</code></pre>
                                         </td>
                                     </tr>
