@@ -43,6 +43,9 @@
             padding-top: 5px;
             border-top: 3px solid orange;
         }
+        .strong{
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
@@ -70,6 +73,28 @@
     <span class="hljs-keyword">PRIMARY</span> KEY (id)
 );</code></pre>
                                         </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                        style="z-index: 30; page-break-inside: avoid;" id="block_12417">
+                        <h3 class="cheat_sheet_output_title" id="title_3915_12417">Struktur bearbeiten</h3>
+                        <div class="cheat_sheet_output_block" id="block_3915_12417">
+                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                class="cheat_sheet_output_code">
+                                <tbody>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
+    <span class="hljs-attribute strong">ADD COLUMN</span> spalten_name <span>data_type</span>
+                                            <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
+    <span class="hljs-attribute strong">DROP</span> spalten_name;
+                                            <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
+    <span class="hljs-attribute strong">MODIFY</span> spalten_name data_type;
+                                            <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
+    <span class="hljs-attribute strong">CHANGE</span> spalten_name_alt spalten_name_neu data_type;
                                     </tr>
                                 </tbody>
                             </table>
@@ -148,7 +173,7 @@
                             <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
                                 class="cheat_sheet_output_twocol">
                                 <tbody>
-                                    <tr class="altrow countrow">
+                                    <tr class="countrow">
                                         <td valign="top" class="cheat_sheet_output_cell_1">
                                             <div style="padding: 3px 8px;">NOT</div>
                                         </td>
@@ -178,6 +203,30 @@
                                         </td>
                                         <td valign="top" class="cheat_sheet_output_cell_2">
                                             <div style="padding: 3px 8px;">kein Wert einget­ragen</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">ALL</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">wahr wenn alle folgenden wahr sind.</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">ANY</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">wahr wenn eins der folgenden wahr sind.</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="altrow countrow">
+                                        <td valign="top" class="cheat_sheet_output_cell_1">
+                                            <div style="padding: 3px 8px;">LIKE</div>
+                                        </td>
+                                        <td valign="top" class="cheat_sheet_output_cell_2">
+                                            <div style="padding: 3px 8px;">Wenn ein Pattern gemached wird</div>
                                         </td>
                                     </tr>
                                 </tbody>
