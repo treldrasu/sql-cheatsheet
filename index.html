@@ -1,36 +1,59 @@
 <head>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        h2{
+
+        h2 {
             margin-top: 50px;
         }
-        h3{
+
+        h3 {
             color: white;
             background-color: orange;
             padding: 10px;
             margin-top: 0;
         }
-        section{
+
+        section {
             border: 1px solid orange;
             border-radius: 5px;
             margin: 10px;
         }
+
         section div {
             padding: 0 20px;
             padding-bottom: 15px;
         }
-        code{
+
+        code {
             color: black;
         }
-        .hljs-keyword, .hljs-attribute{
+
+        .hljs-keyword,
+        .hljs-attribute {
             color: orange;
         }
+
+        #datentypen tr{
+            text-align: center;
+        }
+
+        #datentypen tr ul{
+            text-align: left;
+        }
+
+        #datentypen .table_nocontent{
+            padding-top: 25px;
+            font-weight: 600;
+        }
+
+        #datentypen tr:nth-child(odd),
         .cheat_sheet_output_column_2 .altrow,
         .cheat_sheet_output_column_3 .altrow {
             background: rgba(255, 166, 0, 0.165);
         }
+
         .cheat_sheet_output_block table {
             page-break-inside: avoid;
             border-collapse: collapse;
@@ -38,33 +61,36 @@
             padding: 0;
             width: 100%;
         }
+
         .cheat_sheet_note {
             margin-top: 10px;
             padding-top: 5px;
             border-top: 3px solid orange;
         }
-        .strong{
+
+        .strong {
             font-weight: 700;
         }
     </style>
 </head>
+
 <body>
-<h2>SQL Grundlagen Cheatsheet</h2>
-<article>
-    <table border="0" cellspacing="0" width="100%" cellpadding="0" class="cheat_sheet_output">
-        <tbody>
-            <tr>
-                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_1">
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12416">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12416">Tabellen erstellen</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12416">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs sql"><strong><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span></strong> table_name
+    <h2>SQL Grundlagen Cheatsheet</h2>
+    <article>
+        <table border="0" cellspacing="0" width="100%" cellpadding="0" class="cheat_sheet_output">
+            <tbody>
+                <tr>
+                    <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_1">
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12416">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12416">Tabellen erstellen</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12416">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs sql"><strong><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span></strong> table_name
 (
     id data_type(size) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
     column_name2 data_type(size),
@@ -73,22 +99,22 @@
     <span class="hljs-keyword">PRIMARY</span> KEY (id),
     <span class="hljs-keyword">FOREIGN</span> KEY (id) <span class="hljs-keyword">REFERENCES</span> zweite_Tabelle(fk_id), 
 );</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12417">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12417">Struktur bearbeiten</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12417">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12417">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12417">Struktur bearbeiten</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12417">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
     <span class="hljs-attribute strong">ADD COLUMN</span> spalten_name <span>data_type</span>
                                             <pre><code class="hljs apache"><span class="hljs-attribute">ALTER TABLE</span> table_name
     <span class="hljs-attribute strong">DROP</span> spalten_name;
@@ -119,377 +145,760 @@
     
 <strong><span class="hljs-attribute">DELETE</span> FROM</strong> table_name
     <span class="hljs-attribute">WHERE</span> some_column=some_value;</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12418">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12418">Struktur einer Abfrage</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12418">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs css"><strong class="hljs-keyword">SELECT</strong> <span>[Überschriften/Spaltennamen, Anweisungen]</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12418">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12418">Struktur einer Abfrage</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12418">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs css"><strong class="hljs-keyword">SELECT</strong> <span>[Überschriften/Spaltennamen, Anweisungen]</span>
     <strong><span class="hljs-keyword">FROM</span></strong> <span class="hljs-selector-attr">[Tabellennamen]</span>
     <strong class="hljs-keyword">WHERE</strong> <span class="hljs-selector-attr">[Bedingungen, Gruppierung, Sortierung]</span></code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12427">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12427">Beispiel Abfrage</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12427">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> einwohner/<span class="hljs-number">1000</span> <span class="hljs-keyword">AS</span> <span class="hljs-string">"Einwohner"</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12427">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12427">Beispiel Abfrage</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12427">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> einwohner/<span class="hljs-number">1000</span> <span class="hljs-keyword">AS</span> <span class="hljs-string">"Einwohner"</span>
     <span class="hljs-keyword">FROM</span> cia
     <span class="hljs-keyword">WHERE</span> region=<span class="hljs-string">"Asien"</span></code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;">Einwoh­nerzahl der asiati­schen Länder in der Tabelle cia
-                                    in Tausenden angeben</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;">Einwoh­nerzahl der asiati­schen Länder in der Tabelle
+                                        cia
+                                        in Tausenden angeben</div>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                </td>
-                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_2">
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12419">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12419">logische Operatoren</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12419">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_twocol">
-                                <tbody>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">NOT</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">logische Negation (nicht)</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">OR</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">logisches ODER</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">AND</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">logisches UND</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">IS NULL</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">kein Wert einget­ragen</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">ALL</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">wahr wenn alle folgenden wahr sind.</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">ANY</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">wahr wenn eins der folgenden wahr sind.</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">LIKE</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">Wenn ein Pattern gemached wird</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;">Vor und nach einem logischen Operator muss eine
-                                    vollst­ändige Bedingung stehen.</div>
+                        </section>
+                    </td>
+                    <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_2">
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12419">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12419">logische Operatoren</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12419">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_twocol">
+                                    <tbody>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">NOT</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">logische Negation (nicht)</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">OR</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">logisches ODER</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">AND</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">logisches UND</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">IS NULL</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">kein Wert einget­ragen</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">ALL</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">wahr wenn alle folgenden wahr sind.</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">ANY</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">wahr wenn eins der folgenden wahr sind.
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">LIKE</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">Wenn ein Pattern gemached wird</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;">Vor und nach einem logischen Operator muss eine
+                                        vollst­ändige Bedingung stehen.</div>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12420">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12420">Vergle­ich­sop­era­toren</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12420">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_twocol">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">=</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">gleich</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">&lt;&gt;</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">nicht gleich</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">&gt;</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">grösser als</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">&lt;</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">kleiner als</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">&gt;=</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">grösser oder gleich</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">&lt;=</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">kleiner oder gleich</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12421">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12421">Textbe­din­gungen</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12421">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_twocol">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">%</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">beliebige Anzahl Zeichen</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">_</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">genau ein Zeichen</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;">Diese Beding­ungen können nur mit <strong>LIKE</strong>
-                                    benutzt werden.</div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12420">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12420">Vergle­ich­sop­era­toren</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12420">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_twocol">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">=</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">gleich</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">&lt;&gt;</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">nicht gleich</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">&gt;</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">grösser als</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">&lt;</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">kleiner als</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">&gt;=</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">grösser oder gleich</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">&lt;=</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">kleiner oder gleich</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                    </section>
-                </td>
-                <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_3">
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12422">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12422">Ausgabe auftei­len­/be­sch­ränken
-                        </h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12422">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs-"><span class="hljs-">SELECT</span> []
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12421">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12421">Textbe­din­gungen</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12421">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_twocol">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">%</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">beliebige Anzahl Zeichen</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">_</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">genau ein Zeichen</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;">Diese Beding­ungen können nur mit
+                                        <strong>LIKE</strong>
+                                        benutzt werden.</div>
+                                </div>
+                            </div>
+                        </section>
+                    </td>
+                    <td width="32%" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_3">
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12422">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12422">Ausgabe auftei­len­/be­sch­ränken
+                            </h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12422">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs-"><span class="hljs-">SELECT</span> []
     <span class="hljs-">FROM</span> <span class="hljs-selector-attr">[]</span>
     <span class="hljs-">WHERE</span> []
     <strong class="hljs-keyword">LIMIT</strong> Startzeile, Anzahl</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;"><code>Limit 2,3</code> => zeigt die 3 Elemente nach der Zeile 2</div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12424">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12424">Gruppe­nfu­nkt­ionen</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12424">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_twocol">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">COUNT(­expr)</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">Zeilen zählen</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">AVG(expr)</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">Durchs­chnitt</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">MIN(expr)</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">kleinster Wert</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">MAX(expr)</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">grösster Wert</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <div style="padding: 3px 8px;">SUM(expr)</div>
-                                        </td>
-                                        <td valign="top" class="cheat_sheet_output_cell_2">
-                                            <div style="padding: 3px 8px;">Summe von Werten</div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;">Für <em>expr</em> gibt man die Spalte­nüb­ers­chrift an
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;"><code>Limit 2,3</code> => zeigt die 3 Elemente nach
+                                        der Zeile 2</div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12428">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12428">Beispiel Abfrage II</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12428">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>)
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_twocol"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12424">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12424">Gruppe­nfu­nkt­ionen</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12424">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_twocol">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">COUNT(­expr)</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">Zeilen zählen</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">AVG(expr)</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">Durchs­chnitt</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">MIN(expr)</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">kleinster Wert</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">MAX(expr)</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">grösster Wert</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <div style="padding: 3px 8px;">SUM(expr)</div>
+                                            </td>
+                                            <td valign="top" class="cheat_sheet_output_cell_2">
+                                                <div style="padding: 3px 8px;">Summe von Werten</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;">Für <em>expr</em> gibt man die Spalte­nüb­ers­chrift
+                                        an
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12428">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12428">Beispiel Abfrage II</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12428">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>)
     <span class="hljs-keyword">FROM</span> mitarbeiter
     <span class="hljs-keyword">WHERE</span> abt <span class="hljs-operator">=</span> "Verkauf"</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="cheat_sheet_note">
-                                <div style="padding: 3px 8px;">Anzahl der Mitarb­eiter in der Abteilung "­Ver­kau­f"
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="cheat_sheet_note">
+                                    <div style="padding: 3px 8px;">Anzahl der Mitarb­eiter in der Abteilung "­Ver­kau­f"
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12425">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12425">Gruppieren</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12425">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> []
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12425">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12425">Gruppieren</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12425">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs vbnet"><span class="hljs-keyword">SELECT</span> []
     <span class="hljs-keyword">FROM</span> []
     <span class="hljs-keyword">WHERE</span>[]
     <strong><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span></strong> spalten_name</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12426">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12426">Sortieren</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12426">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs css">SELECT <span class="hljs-selector-attr">[]</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12426">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12426">Sortieren</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12426">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs css">SELECT <span class="hljs-selector-attr">[]</span>
     <span class="hljs-selector-tag">FROM</span> <span class="hljs-selector-attr">[]</span>
     WHERE <span class="hljs-selector-attr">[]</span>
     <strong><span class="hljs-attribute">ORDER BY</span></strong> spalten_name <span class="hljs-keyword">ASC</span>(default) | <span class="hljs-keyword">DESC</span></code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                    <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
-                        style="z-index: 30; page-break-inside: avoid;" id="block_12426">
-                        <h3 class="cheat_sheet_output_title" id="title_3915_12426">Join</h3>
-                        <div class="cheat_sheet_output_block" id="block_3915_12426">
-                            <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
-                                class="cheat_sheet_output_code">
-                                <tbody>
-                                    <tr class="altrow countrow">
-                                        <td valign="top" class="cheat_sheet_output_cell_1">
-                                            <pre><code class="hljs css">SELECT <span class="hljs-selector-attr">[]</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12426">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12426">Join</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12426">
+                                <table border="0" cellspacing="0" cellpadding="0" id="cheat_sheet_output_table"
+                                    class="cheat_sheet_output_code">
+                                    <tbody>
+                                        <tr class="altrow countrow">
+                                            <td valign="top" class="cheat_sheet_output_cell_1">
+                                                <pre><code class="hljs css">SELECT <span class="hljs-selector-attr">[]</span>
     <span class="hljs-selector-tag">FROM</span> <span class="hljs-selector-attr">table1</span>
     <span class="hljs-keyword strong">INNER | LEFT | RIGHT | FULL OUTER</span> JOIN table2 <span class="hljs-keyword strong"> 
         ON </span> table1.id = table2.id;</code></pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</article>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" valign="top" class="cheat_sheet_output_sortable cheat_sheet_output_column_4">
+                        <section class="cheat_sheet_output_wrapper cheat_sheet_output_column_code"
+                            style="z-index: 30; page-break-inside: avoid;" id="block_12416">
+                            <h3 class="cheat_sheet_output_title" id="title_3915_12416">Datentypen</h3>
+                            <div class="cheat_sheet_output_block" id="block_3915_12416">
+                                <table class="table_1" id="datentypen">
+                                    <thead>
+                                        <tr>
+                                            <th>Datentyp</th>
+                                            <th>Speicherplatz</th>
+                                            <th>Beschreibung</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" class="table_nocontent"> Numerisch </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TINYINT </td>
+                                            <td> 1 Byte </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ganzzahlen</li>
+                                                    <li>Bereich mit Vorzeichen: -128 bis 127</li>
+                                                    <li>Bereich ohne Vorzeichen: 0 bis 255</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> SMALLINT </td>
+                                            <td> 2 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ganzzahlen</li>
+                                                    <li>Bereich mit Vorzeichen: -32.768 bis 32.767</li>
+                                                    <li>Bereich ohne Vorzeichen: 0 bis 65.535</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> MEDIUMINT </td>
+                                            <td> 3 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ganzzahlen</li>
+                                                    <li>Bereich mit Vorzeichen: -8.388.608 bis 8.388.607</li>
+                                                    <li>Bereich ohne Vorzeichen: 0 bis 16.277.215</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> INT </td>
+                                            <td> 4 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ganzzahlen</li>
+                                                    <li>Bereich mit Vorzeichen: -2.147.483.648 bis 2.147.483.647</li>
+                                                    <li>Bereich ohne Vorzeichen: 0 bis 4.294.967.295</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> BIGINT </td>
+                                            <td> 8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ganzzahlen</li>
+                                                    <li>Bereich mit Vorzeichen: -9.223.372.036.854.775.808 bis
+                                                        9.223.372.036.854.775.807</li>
+                                                    <li>Bereich ohne Vorzeichen: 0 bis 18.446.744.073.709.551.615</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> DECIMAL </td>
+                                            <td> variiert <br>(<a
+                                                    href="http://dev.mysql.com/doc/refman/5.1/de/precision-math-decimal-changes.html"
+                                                    target="_blank">weitere Infos</a>) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Fixkommazahlen (M, D)</li>
+                                                    <li>Die maximale Anzahl an Ziffern (M) ist 65 (Standard: 10), die
+                                                        maximale Anzahl an Nachkommastellen (D) ist 30 (Standard: 0)
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> FLOAT </td>
+                                            <td> 4 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Fließkommazahlen</li>
+                                                    <li>Erlaubte Werte sind -3,402823466 x 10<sup>38</sup> bis
+                                                        -1,175494351 x 10<sup>-38</sup>, 0 und 1,175494351 x
+                                                        10<sup>-38</sup> bis 3,402823466 x 10<sup>38</sup></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> DOUBLE </td>
+                                            <td> 8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Fließkommazahlen</li>
+                                                    <li>Erlaubte Werte sind -1,7976931348623157 x 10<sup>308</sup> bis
+                                                        -2,2250738585072014 x 10<sup>-308</sup>, 0 und
+                                                        2,2250738585072014 x 10<sup>-308</sup> bis 1,7976931348623157 x
+                                                        10<sup>308</sup></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> REAL </td>
+                                            <td> 8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Synonym für DOUBLE</li>
+                                                    <li>Ausnahme: im SQL-Modus REAL_AS_FLOAT ein Synonym für FLOAT</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> BIT </td>
+                                            <td> ca. (M+7)/8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ein Bitfeld-Typ (M), der M Bits pro Wert speichert (Standard ist
+                                                        1, Maximum ist 64)</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> BOOLEAN </td>
+                                            <td> 1 Byte </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ein Synonym für TINYINT(1), ein Null-Wert wird als falsch
+                                                        angesehen, Nicht-Null-Werte werden als Wahr angesehen</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> SERIAL </td>
+                                            <td> 8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ein Alias für BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="table_nocontent"> Datum und Uhrzeit </td>
+                                        </tr>
+                                        <tr>
+                                            <td> DATE </td>
+                                            <td> 3 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Datum</li>
+                                                    <li>Unterstützter Bereich ist 1000-01-01 bis 9999-12-31</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> DATETIME </td>
+                                            <td> 8 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Kombination aus Datum und Uhrzeit</li>
+                                                    <li>Unterstützter Bereich ist 1000-01-01 00:00:00 bis 9999-12-31
+                                                        23:59:59</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TIMESTAMP </td>
+                                            <td> 4 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Zeitstempel</li>
+                                                    <li>Unterstützter Bereich ist 1970-01-01 00:00:01 UTC bis 2038-01-09
+                                                        03:14:07 UTC</li>
+                                                    <li>Gespeichert als Anzahl der Sekunden seit Beginn der UNIX-Epoche
+                                                        (1970-01-01 00:00:00 UTC)</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TIME </td>
+                                            <td> 3 Bytes </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Uhrzeit</li>
+                                                    <li>Unterstützter Bereich ist -838:59:59 bis 838:59:59</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> YEAR </td>
+                                            <td> 1 Byte </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Jahr</li>
+                                                    <li>Vier- (4, Standard) oder zweistelliges (2) Format</li>
+                                                    <li>Erlaubte Werte sind 70 (1970) bis 69 (2069) oder 1901 bis 2155
+                                                        und 0000</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="table_nocontent"> Zeichenkette </td>
+                                        </tr>
+                                        <tr>
+                                            <td> CHAR </td>
+                                            <td> L Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Zeichenkette mit fester Länge (0 bis 255, Standard: 1) L</li>
+                                                    <li>Rechts wird immer bis zur angegebenen Länge mit Leerzeichen
+                                                        aufgefüllt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> VARCHAR </td>
+                                            <td> L+1 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Zeichenkette mit variabler Länge (0 bis 65.535) L</li>
+                                                    <li>Die tatsächliche maximale Länge hängt von der maximalen Anzahl
+                                                        an Zeilen ab</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TINYTEXT </td>
+                                            <td> L+1 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>TEXT-Spalte mit einer maximalen Länge von 255 Zeichen</li>
+                                                    <li>Gespeichert mit einem Ein-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TEXT </td>
+                                            <td> L+2 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>TEXT-Spalte mit einer maximalen Länge von 65.535 Zeichen</li>
+                                                    <li>Gespeichert mit einem Zwei-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> MEDIUMTEXT </td>
+                                            <td> L+3 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>TEXT-Spalte mit einer maximalen Länge von 16.777.215 Zeichen
+                                                    </li>
+                                                    <li>Gespeichert mit einem Drei-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> LONGTEXT </td>
+                                            <td> L+4 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>TEXT-Spalte mit einer maximalen Länge von 4.294.967.295 oder 4
+                                                        GiB Zeichen</li>
+                                                    <li>Gespeichert mit einem Vier-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> BINARY </td>
+                                            <td> L Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ähnlich wie der CHAR-Typ, speichert aber binäre
+                                                        Byte-Zeichenketten anstelle von nicht-binären
+                                                        Buchstaben-Zeichenketten</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> VARBINARY </td>
+                                            <td> L+1 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Ähnlich wie der VARCHAR-Typ, speichert aber binäre
+                                                        Byte-Zeichenketten anstelle von nicht-binären
+                                                        Buchstaben-Zeichenketten</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> TINYBLOB </td>
+                                            <td> L+1 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>BLOB-Spalte mit einer maximalen Länge L von 255 Zeichen</li>
+                                                    <li>Gespeichert mit einem Ein-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> BLOB </td>
+                                            <td> L+2 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>BLOB-Spalte mit einer maximalen Länge von 65.535 Zeichen</li>
+                                                    <li>Gespeichert mit einem Zwei-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> MEDIUMBLOB </td>
+                                            <td> L+3 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>BLOB-Spalte mit einer maximalen Länge von 16.777.215 Zeichen
+                                                    </li>
+                                                    <li>Gespeichert mit einem Drei-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> LONGBLOB </td>
+                                            <td> L+4 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>BLOB-Spalte mit einer maximalen Länge von 4.294.967.295 oder 4
+                                                        GiB Zeichen</li>
+                                                    <li>Gespeichert mit einem Vier-Byte-Präfix, der die Länge des Wertes
+                                                        in Bytes angibt</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> ENUM </td>
+                                            <td> 1-2 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Aufzählung</li>
+                                                    <li>Gewählt aus einer Liste von bis zu 65.535 Werten</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> SET </td>
+                                            <td> 1, 2, 3, 4 oder 8 Byte(s) </td>
+                                            <td>
+                                                <ul>
+                                                    <li>String-Objekt</li>
+                                                    <li>Ein einzelner Wert gewählt aus einem Satz von bis zu 64
+                                                        Einträgen</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
 </body>
