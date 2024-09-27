@@ -95,9 +95,10 @@
     id data_type(size) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
     column_name2 data_type(size),
     column_name3 data_type(size),
+    fk_colum data_type(size)
     ....
     <span class="hljs-keyword">PRIMARY</span> KEY (id),
-    <span class="hljs-keyword">FOREIGN</span> KEY (id) <span class="hljs-keyword">REFERENCES</span> zweite_Tabelle(fk_id), 
+    <span class="hljs-keyword">FOREIGN</span> KEY (fk_colum) <span class="hljs-keyword">REFERENCES</span> zweite_Tabelle(fk_id) 
 );</code></pre>
                                             </td>
                                         </tr>
